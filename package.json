@@ -1,20 +1,28 @@
 {
   "name": "transform_json_keys",
-  "module": "index.ts",
   "version": "1.0.0",
+  "author": "Myron Apostolakis",
   "repository": {
     "type": "git",
     "url": "https://github.com/myapos/transform_json_keys.git"
   },
-  "author": "Myron Apostolakis",
-  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/bun": "^1.1.10"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
   "bugs": {
     "url": "https://github.com/myapos/transform_json_keys/issues"
   },
   "homepage": "https://github.com/myapos/transform_json_keys#readme",
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
+  "license": "MIT",
   "scripts": {
     "start": "bun run ./src/index.ts",
     "build": "bun run build.ts",
@@ -22,8 +30,5 @@
     "test:watch": "bun test --watch",
     "test:coverage": "bun test --coverage"
   },
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "^1.1.10"
-  }
+  "type": "module"
 }

@@ -3,10 +3,14 @@
     "module": "commonjs",
     "target": "es2020",
     "moduleResolution": "node",
+    "outDir": "./dist",
+    "declaration": true,
+    "emitDeclarationOnly": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["./**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/__specs__", "build.ts", "node_modules"]
 }

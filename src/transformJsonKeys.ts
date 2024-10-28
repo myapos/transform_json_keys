@@ -1,24 +1,14 @@
-/**
- * Represents a JSON structure that can be one of the following types:
- * - `string`
- * - `number`
- * - `boolean`
- * - An object with string keys and values of type `JsonStructure`
- * - An array of `JsonStructure`
- * - An array of primitive types (`string`, `number`, `boolean`, `null`, `undefined`)
- * - `null`
- * - `undefined`
- */
-export type JsonStructure =
-  | string
-  | number
-  | boolean
-  | { [key: string]: JsonStructure }
-  | JsonStructure[]
-  | (string | number | boolean | null | undefined)[]
-  | null
-  | undefined;
+import { JsonStructure } from "./types";
 
+/**
+ * Constructs a full key path by combining a parent key and a response key.
+ * If the parent key is provided, the response key is appended to it with a dot separator.
+ * If the parent key is not provided, the response key is returned as is.
+ *
+ * @param parentKey - The parent key as a string or undefined.
+ * @param responseKey - The response key to be appended.
+ * @returns The combined key path as a string.
+ */
 const buildParentKey = (
   parentKey: string | undefined,
   responseKey: string
