@@ -38,9 +38,7 @@
     "flexible",
     "api",
     "response"
-  ]
-
-
+  ],
   "bugs": {
     "url": "https://github.com/myapos/transform_json_keys/issues"
   },
