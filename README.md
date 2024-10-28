@@ -10,7 +10,7 @@ This utility provides a function to transform the keys of a nested JSON object a
 
 ## Installation
 
-To use this utility, you can install it via npm:
+To use this utility, you can install it via bun:
 
 To install dependencies:
 
