@@ -1,6 +1,6 @@
 {
   "name": "transform_json_keys",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Myron Apostolakis",
   "repository": {
     "type": "git",
@@ -18,6 +18,29 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
+  "keywords": [
+    "transform",
+    "json",
+    "mapper",
+    "bun",
+    "typescript",
+    "schema",
+    "nested",
+    "keys",
+    "arrays",
+    "objects",
+    "transformation",
+    "utility",
+    "javascript",
+    "data",
+    "conversion",
+    "mapping",
+    "flexible",
+    "api",
+    "response"
+  ]
+
+
   "bugs": {
     "url": "https://github.com/myapos/transform_json_keys/issues"
   },

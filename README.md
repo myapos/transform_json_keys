@@ -43,7 +43,7 @@ import type { JsonStructure } from "transform_json_keys";
 To fork the repository, use the following command:
 
 ```bash
-git clone https://github.com/myapos/transform_json_keys
+git clone https://github.com/myapos/transform_json_keys.git
 ```
 
 ### Install Dependencies
@@ -199,25 +199,3 @@ In frontend applications, managing state often involves transforming data receiv
 ### 7. Form Data Handling
 
 When dealing with form submissions, the keys of the JSON data might need to be transformed to match the backend schema. This utility can automate the transformation, reducing the need for manual key mapping.
-
-## Keywords
-
-- transform
-- json
-- mapper
-- bun
-- typescript
-- schema
-- nested
-- keys
-- arrays
-- objects
-- transformation
-- utility
-- javascript
-- data
-- conversion
-- mapping
-- flexible
-- api
-- response
