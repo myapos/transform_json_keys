@@ -1,5 +1,14 @@
 # JSON Key Transformer
 
+> Made with Bun
+
+<p align="left">
+<a href="https://bun.sh/"><img src="https://img.shields.io/badge/bun-v1.1.29-green.svg" alt="Bun"></a>
+    <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/npm-v6.14.8-blue.svg" alt="NPM"></a>
+        <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/node-v20.18.0-green.svg" alt="Node.js">
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/typescript-v4.1.3-blue.svg" alt="TypeScript"></a>
+</p>
+
 This utility provides a function to transform the keys of a nested JSON object according to a provided schema. It supports complex JSON structures with varying levels of nesting and mixed types.
 
 ## Features
@@ -10,21 +19,44 @@ This utility provides a function to transform the keys of a nested JSON object a
 
 ## Installation
 
-To use this utility, you can install it via bun:
+To use this utility, you can install it via npm:
 
-To install dependencies:
+```bash
+npm install transform_json_keys
+```
+
+or
+
+```bash
+bun install transform_json_keys
+```
+
+and then
+
+```bash
+import { transformJsonKeys } from "transform_json_keys";
+import type { JsonStructure } from "transform_json_keys";
+```
+
+## Fork the Repository
+
+To fork the repository, use the following command:
+
+```bash
+git clone https://github.com/myapos/transform_json_keys
+```
+
+### Install Dependencies
+
+To install the necessary dependencies, run:
 
 ```bash
 bun install
 ```
 
-To run:
+### Running Tests
 
-```bash
-bun start
-```
-
-To run tests:
+To run the tests, use:
 
 ```bash
 bun test
@@ -32,14 +64,13 @@ bun test
 
 ## Usage
 
-Here are some examples of how to use the `transformJsonKeys` function:
-
 ### Example 1: Basic Transformation
 
-```javascript
-import transformJsonKeys from "./path/to/transformJsonKeys";
+```typescript
+import { transformJsonKeys } from "transform_json_keys";
+import type { JsonStructure } from "transform_json_keys";
 
-const apiResponse = {
+const apiResponse: JsonStructure = {
   user: {
     id: 1,
     name: "John Doe",
@@ -71,8 +102,11 @@ console.log(transformedResponse);
 
 ### Example 2: Handling Arrays
 
-```javascript
-const apiResponseWithArray = {
+```typescript
+import { transformJsonKeys } from "transform_json_keys";
+import type { JsonStructure } from "transform_json_keys";
+
+const apiResponseWithArray: JsonStructure = {
   users: [
     { id: 1, name: "John Doe" },
     { id: 2, name: "Jane Smith" },
@@ -101,8 +135,11 @@ console.log(transformedResponseWithArray);
 
 ### Example 3: Nested Objects
 
-```javascript
-const nestedApiResponse = {
+```typescript
+import { transformJsonKeys } from "transform_json_keys";
+import type { JsonStructure } from "transform_json_keys";
+
+const nestedApiResponse: JsonStructure = {
   user: {
     profile: {
       firstName: "John",
@@ -132,3 +169,55 @@ console.log(transformedNestedResponse);
 //   }
 // }
 ```
+
+## Use Cases
+
+### 1. API Response Transformation
+
+When working with APIs, the response data might not always be in the desired format. This utility can help transform the keys of the JSON response to match the expected format in your application.
+
+### 2. Data Normalization
+
+In data processing pipelines, it's often necessary to normalize data from different sources. This utility can be used to standardize the keys of JSON objects, making it easier to merge and analyze data.
+
+### 3. Configuration Management
+
+For applications that rely on configuration files in JSON format, this utility can help transform configuration keys to match the required schema, ensuring consistency across different environments.
+
+### 4. Logging and Monitoring
+
+When logging JSON data, it's important to have a consistent key format for easier searching and monitoring. This utility can transform the keys of JSON logs to a standardized format.
+
+### 5. Data Migration
+
+During data migration processes, the structure of JSON data might need to change. This utility can assist in transforming the keys of JSON objects to match the new schema, simplifying the migration process.
+
+### 6. Frontend State Management
+
+In frontend applications, managing state often involves transforming data received from APIs. This utility can help transform the keys of JSON objects to match the state structure required by the frontend framework.
+
+### 7. Form Data Handling
+
+When dealing with form submissions, the keys of the JSON data might need to be transformed to match the backend schema. This utility can automate the transformation, reducing the need for manual key mapping.
+
+## Keywords
+
+- transform
+- json
+- mapper
+- bun
+- typescript
+- schema
+- nested
+- keys
+- arrays
+- objects
+- transformation
+- utility
+- javascript
+- data
+- conversion
+- mapping
+- flexible
+- api
+- response
