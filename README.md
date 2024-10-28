@@ -6,7 +6,7 @@
 <a href="https://bun.sh/"><img src="https://img.shields.io/badge/bun-v1.1.29-green.svg" alt="Bun"></a>
     <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/npm-v6.14.8-blue.svg" alt="NPM"></a>
         <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/node-v20.18.0-green.svg" alt="Node.js">
-    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/typescript-v4.1.3-blue.svg" alt="TypeScript"></a>
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/typescript-v5.0.0-blue.svg" alt="TypeScript"></a>
 </p>
 
 This utility provides a function to transform the keys of a nested JSON object according to a provided schema. It supports complex JSON structures with varying levels of nesting and mixed types.
