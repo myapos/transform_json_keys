@@ -1,6 +1,7 @@
 import { expect, it, describe } from "bun:test";
 
-import transformJsonKeys, { JsonStructure } from "../transformJsonKeys";
+import transformJsonKeys from "../transformJsonKeys";
+import type { JsonStructure } from "../types";
 
 describe("transformJsonKeys", () => {
   describe("array", () => {
@@ -397,7 +398,7 @@ describe("transformJsonKeys", () => {
     it("should transform keys in deeper level with object and combined large data", () => {
       const NUM_OF_USERS = 100000;
       const createUsers = (num: number) => {
-        const users = [];
+        const users: JsonStructure[] = [];
 
         for (let i = 0; i < num; i++) {
           users.push({
@@ -414,7 +415,7 @@ describe("transformJsonKeys", () => {
       };
 
       const createExpectedUsers = (num: number) => {
-        const users = [];
+        const users: JsonStructure[] = [];
 
         for (let i = 0; i < num; i++) {
           users.push({
@@ -534,6 +535,42 @@ describe("transformJsonKeys", () => {
         },
       };
       const transformedResponse = transformJsonKeys(apiResponse, schema);
+
+      expect(transformedResponse).toEqual(expectedTransformed);
+    });
+
+    it("should work with parent keys in sub objects", () => {
+      const apiResponse: JsonStructure = {
+        user: {
+          id: 1,
+          name: "John Doe",
+          address: {
+            street: "123 Main St",
+            city: "Anytown",
+          },
+        },
+      };
+
+      const schema = {
+        "user.id": "userId",
+        "user.name": "userName",
+        "user.address": "street",
+        "user.address.street": "userStreet",
+        "user.address.city": "userCity",
+      };
+
+      const transformedResponse = transformJsonKeys(apiResponse, schema);
+
+      const expectedTransformed = {
+        user: {
+          userId: 1,
+          userName: "John Doe",
+          street: {
+            userStreet: "123 Main St",
+            userCity: "Anytown",
+          },
+        },
+      };
 
       expect(transformedResponse).toEqual(expectedTransformed);
     });
