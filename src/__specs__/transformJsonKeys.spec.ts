@@ -1,7 +1,7 @@
 import { expect, it, describe } from "bun:test";
 
 import transformJsonKeys from "../transformJsonKeys";
-import { JsonStructure } from "../types";
+import type { JsonStructure } from "../types";
 
 describe("transformJsonKeys", () => {
   describe("array", () => {
@@ -398,7 +398,7 @@ describe("transformJsonKeys", () => {
     it("should transform keys in deeper level with object and combined large data", () => {
       const NUM_OF_USERS = 100000;
       const createUsers = (num: number) => {
-        const users = [];
+        const users: JsonStructure[] = [];
 
         for (let i = 0; i < num; i++) {
           users.push({
@@ -415,7 +415,7 @@ describe("transformJsonKeys", () => {
       };
 
       const createExpectedUsers = (num: number) => {
-        const users = [];
+        const users: JsonStructure[] = [];
 
         for (let i = 0; i < num; i++) {
           users.push({
