@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ESNext", // Change to ESNext to output ES module syntax
     "target": "es2020",
     "moduleResolution": "node",
     "outDir": "./dist",

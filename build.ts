@@ -30,6 +30,7 @@ async function buildProject() {
         version: "1.0.0",
         main: "index.js",
         types: "index.d.ts",
+        type: "module",
       };
       writeFileSync(
         "dist/package.json",
