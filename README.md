@@ -96,7 +96,7 @@ console.log(transformedResponse);
 //   user: {
 //     userId: 1,
 //     userName: 'John Doe',
-//     street: {
+//     address: {
 //       userStreet: '123 Main St',
 //       userCity: 'Anytown'
 //     }
