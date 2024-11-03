@@ -93,10 +93,14 @@ const transformedResponse = transformJsonKeys(apiResponse, schema);
 console.log(transformedResponse);
 // Output:
 // {
-//   userId: 1,
-//   userName: 'John Doe',
-//   userStreet: '123 Main St',
-//   userCity: 'Anytown'
+//   user: {
+//     userId: 1,
+//     userName: 'John Doe',
+//     street: {
+//       userStreet: '123 Main St',
+//       userCity: 'Anytown'
+//     }
+//   }
 // }
 ```
 
